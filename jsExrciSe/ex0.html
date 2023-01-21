@@ -1,0 +1,64 @@
+<html>
+    <head>
+      <style>
+        td{
+          width:20px;
+          height:20px;
+          background-color: brown;
+          visibility: hidden;
+        }
+      </style>
+        <script>
+
+  function MSG(){
+            msg="Maths Info chimie Bio Gio";
+            t1=msg.split(' ');
+            s="<ul>";
+            for(i=0;i<t1.length;i++){
+               s+="<li>"+t1[i]+"</li>";
+            }
+            s+="</ul>";
+            document.write(s);}
+
+            //function to creat Style of table:
+            N=7,x=Math.floor(N/2);
+            k=0;
+  function Afficher(){
+    tr=document.querySelectorAll("#t tr");
+    for(i=0;i<N;i++){
+      td=tr[i].getElementsByTagName("td");
+      if(!(i<x-k||i>x+k) ){
+        for(j=0;j<N;j++){
+          if(j==x-k||j==x+k)
+        
+        //td[j].innerHTML="$";
+          td[j].style.visibility="visible";
+        
+        }}
+      
+    }
+ k++;
+    setTimeout("Afficher()",1000);
+  }
+    // another function
+   
+        </script>
+        
+    </head>
+    <body>
+      <table id="t" border>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+<br>
+      <input type="button" value="click" onclick="Afficher()">
+      <script>
+        // MSG();
+        </script>
+    </body>
+</html>

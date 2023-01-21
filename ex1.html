@@ -1,0 +1,51 @@
+<html>
+    <head>
+<script>
+     let a=document.getElementById("select");
+     //a.addEventListener('change',afficher);
+    function afficher(){
+        var sp1=document.getElementById("span1");
+        var sp2=document.getElementById("span2");
+        if(F.type_painment.selectedIndex<=0){
+           
+            sp1.style.display='block'
+            sp2.style.display='none'
+        }else{
+             sp1.style.display='none'
+            sp2.style.display='block'
+        }
+    }
+  
+</script>        
+        
+    </head>
+    <body>
+        <form name="F">
+            <fieldset>
+                <legend>Information du paiement</legend>
+
+                Nom et Prenom: <input type="text" name="nom"><br>
+                Sexe:<input name="sexe" type="radio" value="H">H<input name="sexe" type="radio" value="F">F<br>
+                Type de paiment:
+                <select name="type_painment" id="select" onchange="afficher()">
+                    <option>Carte bancaire</option>
+                    <option>PayPal</option>
+                </select><br>
+                <div>
+                    <span id="span1">
+               Type de carte: <input type="text" name="type_catre">
+                Nuimero de carte: <input type="text" name="num">
+                        </span>
+                <br>
+                    <div id="span2">
+                 Email: <input type="email" name="mail">
+                Mode de pass: <input type="password" name="mp">
+                        </div>
+                    </div>
+                <br>
+                <input type="submit" value="Valide"  >
+                <input type="reset" value="Annuler" >
+            </fieldset>
+        </form>
+    </body>
+</html>

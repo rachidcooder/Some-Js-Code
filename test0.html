@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        div{
+            width:150px;
+            height:150px;
+        }
+        td{
+            width:20px;
+            height:20px;
+            visibility:hidden;
+            background-color:blue;
+        }
+    </style>
+    <script>
+                   k1=5;
+        function Remplir1(){
+
+           tr=document.querySelectorAll("#t1 tr");
+           for(i=5;i>=0;i--){
+              td=tr[i].getElementsByTagName("td");
+               for(j=0;j<=i-k1;j++){
+                  td[j].style.visibility="visible";
+               }
+           }
+           k1--;
+           //setTimeout("Remplire1()",1000);
+            setTimeout("Remplir1()", 1000);
+        }
+    </script>
+</head>
+    <body>
+
+  <div> 
+   <table id="t1" border="1">
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+   </table> 
+    <input type="button" value="Remplir1" onclick="Remplir1()">
+   </div>
+    </body>
+</html>

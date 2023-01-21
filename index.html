@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Js cours</title>
+ <!-- <script src="index.js"></script> -->
+ 
+</head>
+<body>
+ <b>Hello World !</b>
+
+  <div >
+    <table id="t" >
+      <tr>
+        <td>Nom:</td>
+        <td><input type="text" placeholder="Votre Nom"></td>
+      </tr>
+       <tr>
+        <td>Email:</td>
+        <td><input type="text" placeholder="Votre email"></td>
+      </tr>
+       <tr>
+        <td>Mote pass:</td>
+        <td><input type="password" placeholder="Votre password"></td>
+      </tr>
+       <tr>
+        <td></td>
+        <td><input type="submit" value="ajouter" id="ajouter"><input id="cancel" type="reset" value="cancel"></td>
+      </tr>
+    </table>
+  </div>
+
+  <table border id="tInfo">
+    <tr>
+      <th>Nom</th>
+      <th>Email</th>
+    </tr>
+  </table>
+  <script>
+    //
+    tData=document.getElementById("t");
+    data=document.querySelectorAll("#t tr td input");
+    t=document.getElementById("tInfo");
+    ajouter=document.getElementById("ajouter");
+
+     tData.style.background="gray";
+    tData.style.padding="15px"
+    t.style.margin="15px";
+//events
+    ajouter.onclick=function(){
+      if(data[0].value!=""&data[1].value!=""&data[2].value!=""){
+ 
+      t.innerHTML+='<tr><td>'+data[0].value+'</td><td bgColor="blue">'+data[1].value +'</td></tr>'
+      }else{
+
+        alert("Some field are Empty!");
+      }
+    }
+    
+  </script>
+</body>
+</html>

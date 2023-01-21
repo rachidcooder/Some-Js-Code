@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            td{
+                width:20px;
+                height:20px;
+                background-color:aqua;
+                visibility: hidden;
+            }
+          
+        </style>
+        <script>
+          k=5;
+          function remp(){
+            //alzrt("hello world:")
+            tr=document.querySelectorAll("#t tr");
+            for(i=0;i<tr.length;i++){
+              td=tr[i].getElementsByTagName("td");
+              for(j=5;j>=k+i;j--){
+             if(k>=0)
+                //td[j].style.visibility='visible';
+                td[j].style.visibility = "visible"; 
+              }
+            }
+            k--;
+            setTimeout("remp()",1000);
+          }
+        </script>
+    </head>
+    <body>
+
+ <table id="t" border>
+<tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+     <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+     <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+     <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+     <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+     <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+        </table>
+        <br>
+        <input type="button" value="Remplir" onclick="remp()">
+    </body>
+</html>

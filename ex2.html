@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+            function ajouter(){   
+                t=document.getElementById("t");
+                nom=prompt("Entre votre nome");
+                note=prompt("Entrer votre note");
+                if(note>=10){
+                   t.innerHTML+="<tr><td>"+nom+"</td ><td bgcolor='green' onclick='Modifier(this);'>"+note+"</td></tr>" 
+                }else{
+                    t.innerHTML+="<tr><td>"+nom+"</td><td bgcolor='red'onclick='Modifier(this);'>"+note+"</td></tr>" 
+                }
+            }
+            // function Modifier
+
+            function Modifier(x){
+                note=prompt("Entrer nouveau note");
+                 x.innerHTML=note
+                if(note>10){
+                    x.style.background="green";
+                }else{
+                    x.style.background="red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table id="t" border=1 cellspacing=0 with=80%>
+
+            <tr>
+                <td with=80>Nom</td>
+                <td with=80>Note</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+    <form name="F">
+        <input type="button" value="Ajouter etudent" onclick="ajouter();">
+    </form>
+    </body>
+</html>
